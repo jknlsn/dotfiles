@@ -9,3 +9,8 @@ Git bare clone the repo
 
 Pull the files
 `/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull`
+
+From now on can use `dotfiles` commands:
+
+- `dotfiles update`
+- `dotfiles install`
