@@ -43,6 +43,12 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 #####################
+# DOT FILES MANAGER #
+#####################
+zinit ice depth=1;
+zinit light jknlsn/dfm
+
+#####################
 # PLUGINS           #
 #####################
 # SSH-AGENT
@@ -123,9 +129,6 @@ setopt list_ambiguous         # complete as much of a completion until it gets a
 # ALIASES           #
 #####################
 source $HOME/.zsh_aliases
-
-zinit ice depth=1;
-zinit light jknlsn/dfm
 
 #####################
 # EXPORTS           #

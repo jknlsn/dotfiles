@@ -1,5 +1,7 @@
 # dotfiles
 
+Inspired by [https://github.com/kalkayan/dotfiles](https://github.com/kalkayan/dotfiles).
+
 ## Usage
 
 Install xcode command line tools.
