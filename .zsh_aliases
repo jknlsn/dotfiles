@@ -1,1 +1,15 @@
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+function dotfiles(){
+    if [[ $argv = "add ." ]]; then
+        echo "Nope, you don't want to add all files."
+    elif [[ $argv = "update" ]]; then
+        rm ~/.Brewfile
+        brew bundle dump --global
+        dotfiles add ~/.Brewfile
+        dotfiles commit -m "Update brew installs"
+        dotfiles push
+    elif [[ $argv = "install" ]]; then
+        brew bundle install --global
+    else
+        /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
+    fi;
+}
