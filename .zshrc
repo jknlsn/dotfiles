@@ -124,6 +124,16 @@ setopt list_ambiguous         # complete as much of a completion until it gets a
 #####################
 source $HOME/.zsh_aliases
 
+
+#####################
+# DOTFILES           #
+#####################
+fpath=(
+  ~/.zsh_functions/
+)
+
+autoload -Uz dotfiles
+
 #####################
 # EXPORTS           #
 #####################

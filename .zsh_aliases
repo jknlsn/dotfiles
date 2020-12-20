@@ -1,16 +1,15 @@
-function dotfiles(){
+function dotfiles_old(){
     if [[ $argv = "add ." ]]; then
         echo "Nope, you don't want to add all files."
-    elif [[ $argv = "update" ]]; then
+    elif [[ $1 = "update" ]]; then
         rm ~/.Brewfile
         brew bundle dump --global
         dotfiles add ~/.Brewfile
         dotfiles commit -m "Update dotfiles and installs" -a
         dotfiles push
-    elif [[ $argv = "install" ]]; then
+    elif [[ $1 = "install" ]]; then
         brew bundle install --global
     elif [[ $1 = "include"  && $# = 2 ]]; then
-        echo "testing!!!!"
         dotfiles add $2
         dotfiles commit -m "Added $2"
         dotfiles push
