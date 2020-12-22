@@ -3,7 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Jake Nelson
 	email = j.n@live.com.au
-# use main instead of master
-# https://www.leigh.net.au/writing/git-init-main/
 [init]
-	templateDir = ~/.git-template
+	defaultBranch = main
