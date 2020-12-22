@@ -1,3 +1,56 @@
+# ############################################################### #
+# THE FOLLOWING SECTION CONTAIN SIMPLE MAPPINGS DEMONSTRATING HOW #
+# TO INTERACT WITH THE YABAI WM. THESE ARE SUPPOSED TO BE USED AS #
+# A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
+# ############################################################### #
+
+# JAKE'S MAPPINGS #
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south 
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east 
+
+# move managed window
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# send window to monitor and follow focus
+# shift + alt - ,  : yabai -m window --display next; yabai -m display --focus next
+# shift + alt - .  : yabai -m window --display prev; yabai -m display --focus prev
+
+# balance size of windows
+shift + alt - m : yabai -m space --balance
+
+# toggle window split type
+shift + alt - n : yabai -m window --toggle split
+
+# UNUSED CURRENTLY #
+
+# send window to desktop and follow focus
+# shift + alt - x : yabai -m window --space next; yabai -m space --focus next
+# shift + alt - z : yabai -m window --space prev; yabai -m space --focus prev
+
+# focus monitor
+# shift + alt - 2  : yabai -m display --focus prev
+# shift + alt - 3  : yabai -m display --focus next
+
+# float / unfloat window and center on screen
+# alt - t : yabai -m window --toggle float;\
+#           yabai -m window --grid 4:4:1:1:2:2
+
+# make floating window fill screen
+# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
+# ############################################################### #
+
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
 # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
@@ -75,36 +128,34 @@
 # TO INTERACT WITH THE YABAI WM. THESE ARE SUPPOSED TO BE USED AS #
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
-# Open Kitty
-# cmd - return : open -na /Applications/Kitty.app
 
 # focus window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south 
-alt - k : yabai -m window --focus north 
-alt - l : yabai -m window --focus east 
+# alt - h : yabai -m window --focus west
+# alt - j : yabai -m window --focus south 
+# alt - k : yabai -m window --focus north 
+# alt - l : yabai -m window --focus east 
 
 # swap managed window
-shift + alt - h : yabai -m window --swap west 
-shift + alt - j : yabai -m window --swap south 
-shift + alt - k : yabai -m window --swap north 
-shift + alt - l : yabai -m window --swap east 
+# shift + alt - h : yabai -m window --swap west 
+# shift + alt - j : yabai -m window --swap south 
+# shift + alt - k : yabai -m window --swap north 
+# shift + alt - l : yabai -m window --swap east 
 
 # move managed window
-shift + cmd - h : yabai -m window --warp west 
-shift + cmd - j : yabai -m window --warp south 
-shift + cmd - k : yabai -m window --warp north 
-shift + cmd - l : yabai -m window --warp east
+# shift + cmd - h : yabai -m window --warp west 
+# shift + cmd - j : yabai -m window --warp south 
+# shift + cmd - k : yabai -m window --warp north 
+# shift + cmd - l : yabai -m window --warp east
 
 # balance size of windows
-shift + alt - 0 : yabai -m space --balance
+# shift + alt - 0 : yabai -m space --balance
 
 # make floating window fill screen
-shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+# hift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
-shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
-shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 # shift + cmd - n : yabai -m space --create && \
@@ -122,18 +173,22 @@ shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 # cmd + alt - 5 : yabai -m space --focus 5
 
 # rotate by 90
-cmd + alt -z : yabai -m space --rotate 90
+# cmd + alt -z : yabai -m space --rotate 90
+
 # send window to desktop and follow focus
-shift + cmd - x : yabai -m window --space next; yabai -m space --focus next
-shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
+# shift + cmd - x : yabai -m window --space next; yabai -m space --focus next
+# shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
+
+# shift + cmd - x : yabai -m window --space next; yabai -m space --focus next
+# shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
 
 # focus monitor
 # ctrl + alt - z  : yabai -m display --focus prev
 # ctrl + alt - 3  : yabai -m display --focus 3
 
 # send window to monitor and follow focus
-# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
-# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+# ctrl + cmd + alt - j  : yabai -m window --display next; yabai -m display --focus next
+# ctrl + cmd + alt - k  : yabai -m window --display prev; yabai -m display --focus prev
 
 # move floating window
 # shift + ctrl - a : yabai -m window --move rel:-20:0
@@ -158,8 +213,8 @@ shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
 # alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
-alt - t : yabai -m window --toggle float;\
-          yabai -m window --grid 4:4:1:1:2:2
+# alt - t : yabai -m window --toggle float;\
+#           yabai -m window --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), topmost, border and picture-in-picture
 # alt - p : yabai -m window --toggle sticky;\
