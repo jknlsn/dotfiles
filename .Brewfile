@@ -6,6 +6,8 @@ tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 brew "htop"
+brew "kubernetes-cli", link: false
+brew "minikube"
 brew "nvm"
 brew "yarn"
 brew "jesseduffield/lazygit/lazygit"
