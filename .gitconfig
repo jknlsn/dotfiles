@@ -5,3 +5,7 @@
 	email = j.n@live.com.au
 [init]
 	defaultBranch = main
+[push]
+	followTags = true
+[pull]
+	rebase = false
