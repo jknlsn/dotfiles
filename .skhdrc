@@ -41,11 +41,12 @@ shift + alt - n : yabai -m window --toggle split
 # shift + alt - 3  : yabai -m display --focus next
 
 # float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float;\
-#           yabai -m window --grid 4:4:1:1:2:2
+# shift + alt - t : yabai -m window --toggle float;\
+#          yabai -m window --grid 4:4:1:1:2:2
 
-# make floating window fill screen
-# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+# float / unfloat window and fill screen
+shift + alt - up     : yabai -m window --toggle float;\
+                       yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
 # shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1

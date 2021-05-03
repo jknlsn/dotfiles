@@ -9,3 +9,5 @@
 	followTags = true
 [pull]
 	rebase = false
+[alias]
+	wip = push --set-upstream origin not-58-add-more-information-to-countries-table -o merge_request.create -o merge_request.remove_source_branch -o merge_request.title=\"WIP: Merge not-58-add-more-information-to-countries-table\"
