@@ -2,5 +2,3 @@ alias ejectall="osascript -e 'tell application \"Finder\" to eject (every disk w
 
 function wip() { git push --set-upstream origin $@ -o merge_request.create -o merge_request.remove_source_branch -o merge_request.title="WIP: Merge $@"}
 function merge() { git push -o merge_request.title="Merge $@" }
-
-function test() { echo "print this $@" }
