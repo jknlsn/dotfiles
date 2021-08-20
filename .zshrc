@@ -1,12 +1,12 @@
-### Set theme (has console output so above instant prompt)
-if [[ $(defaults read -g AppleInterfaceStyle) = "Dark" ]];
-then
-  command sed -i -e "s+horizonTheme: 'bright'+horizonTheme: ''+" .hyper.js
-  command clear
-else
-  command sed -i -e "s+horizonTheme: ''+horizonTheme: 'bright'+" .hyper.js
-  command clear
-fi
+## Set theme (has console output so above instant prompt)
+# if [[ $(defaults read -g AppleInterfaceStyle) = "Dark" ]];
+# then
+#   command sed -i -e "s+horizonTheme: 'bright'+horizonTheme: ''+" .hyper.js
+#   command clear
+# else
+#   command sed -i -e "s+horizonTheme: ''+horizonTheme: 'bright'+" .hyper.js
+#   command clear
+# fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -143,3 +143,8 @@ export EDITOR="code-insiders --wait"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.0.2/bin:$PATH"
