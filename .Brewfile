@@ -39,6 +39,7 @@ brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 cask "1password"
 cask "cyberduck"
 cask "docker"
+cask "http-toolkit"
 cask "hyper"
 cask "iina"
 cask "notion"
