@@ -24,6 +24,14 @@ Source the zshrc config.
 
 From now on can use `dfm` commands to install brew packages or to update the list of installed brew packages and sync it to this repo.
 
+The first time that you push from a new installation, you will need to set the upstream. The first `dfm update` will fail, but it will record any changes you've made to brew installs etc.
+
+```
+dfm update
+cd /.dotfiles
+git push --set-upstream origin main
+```
+
 ## Notes
 
 Inspired by [https://github.com/kalkayan/dotfiles](https://github.com/kalkayan/dotfiles).
