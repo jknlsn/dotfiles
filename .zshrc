@@ -150,7 +150,7 @@ source $HOME/.zsh_aliases
 #####################
 # EXPORTS           #
 #####################
-export EDITOR="code-insiders --wait"
+export EDITOR="code --wait"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -159,3 +159,4 @@ export EDITOR="code-insiders --wait"
 # export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="./vendor/bin:$PATH"

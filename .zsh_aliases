@@ -14,11 +14,12 @@ function merge() { git push -o merge_request.title="Merge $@" }
 #     done
 #     command git "$@"
 #   }
-#   annoy_me() { 
-#     echo "Stop using -m, $USER!" 
-#     echo "You are now in time out."
-#     settings=$(stty -g)        
-#     stty raw
-#     sleep 15
-#     stty "$settings"
-#   }
+
+# annoy_me() { 
+#   echo "Stop using -m, $USER!" 
+#   echo "You are now in time out."
+#   settings=$(stty -g)        
+#   stty raw
+#   sleep 15
+#   stty "$settings"
+# }
