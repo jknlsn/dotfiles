@@ -1,7 +1,18 @@
 alias ejectall="osascript -e 'tell application \"Finder\" to eject (every disk whose ejectable is true)'"
+alias aliases="code ~/.zsh_aliases"
+alias reload="source ~/.zshrc"
+alias lights="python3 ~/Developer/Scripts/RotateLIFXLights/rotate_lifx_lights.py"
 
 function wip() { git push --set-upstream origin $@ -o merge_request.create -o merge_request.remove_source_branch -o merge_request.title="WIP: Merge $@"}
 function merge() { git push -o merge_request.title="Merge $@" }
+
+function round_14_series_screenshot_corners {
+    for f in ./Fastlane/Screenshots/*/*14*.png; do convert "$f" \( +clone  -alpha extract \
+        -draw 'fill black polygon 0,0 0,50 50,0 fill white circle 50,50 50,0' \
+        \( +clone -flip \) -compose Multiply -composite \
+        \( +clone -flop \) -compose Multiply -composite \
+    \) -alpha off -compose CopyOpacity -composite "${f%%.png}.png"; done
+}
 
 # function git() {
 #     for arg
