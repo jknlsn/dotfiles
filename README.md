@@ -13,10 +13,13 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 Pull the files down and configure this repo.
 
 ```
-git clone --bare https://github.com/jknlsn/dotfiles.git $HOME/.dotfiles
+git clone --bare git@github.com:jknlsn/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles/ config core.bare false
 git --git-dir=$HOME/.dotfiles/ config core.worktree $HOME
 git --git-dir=$HOME/.dotfiles/ checkout -f
+cd $HOME/.dotfiles/
+git push --set-upstream origin main
+cd $HOME
 ```
 
 Source the zshrc config.
