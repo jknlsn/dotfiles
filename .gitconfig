@@ -13,3 +13,16 @@
 	helper = osxkeychain
 [core]
 	editor = code --wait
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[help]
+	autocorrect = 10
+[rerere]
+	enabled = false
+[diff]
+	algorithm = histogram
+[merge]
+	conflictstyle = zdiff3
